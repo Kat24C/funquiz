@@ -53,10 +53,13 @@ img {
     color: blue;
     background-color: lavender;
     outline: black 1px solid;
-    align-items: flex-end;
 }
 
 .question {
     font-weight: bold;
     font-size: larger;
+}
+
+.hide {
+    display: none;
 }
