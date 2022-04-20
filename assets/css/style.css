@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Whisper&display=swap');
+
+body {
+    max-width: 75%;
+    font-family: whisper, sans-serif, 'shadows into light';
+    background-color: aquamarine;
+    color: blue;
+    text-align: center;
+}
+
+h1 {
+    font-size: xxlarger;
+}
+
+img {
+    width: 4%;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-content: center;
+}
+
+#qcontainer {
+      width: 450px;
+      max-width: 80%;
+      max-height: fit-content;
+      background-color: #00E3DD;
+      padding: 10px;
+      box-shadow: 0 0 15px 5px;
+      margin-left: auto;
+      margin-right: auto;
+}
