@@ -1,10 +1,10 @@
 /* font google: fonts Shadow Into Light and Whisper */
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Shadows+Into+Light&display=swap');
 
 /* Body style and color */
 
 body {
-    font-family: whisper, sans-serif, 'shadows into light';
+    font-family: 'patrick Hand', sans-serif, 'Shadow Into Light';
     background-color: #EBEEFF;
     color: blueviolet;
     text-align: center;
@@ -16,7 +16,7 @@ body {
 /* Title and image in title */
 
 h1 {
-    font-family: 'shadows into light', sans-serif, whisper;
+    font-family: 'Shadows Into Light', sans-serif, 'Patrick Hand';
     color: blue; 
 }
 
@@ -43,4 +43,20 @@ img {
       box-shadow: 0 0 15px 5px;
       margin-left: auto;
       margin-right: auto;
+}
+
+/* Button style */
+.btn--next, .btn--begin {
+    width: 20%;
+    font-size: large;
+    font-weight: bolder;
+    color: blue;
+    background-color: lavender;
+    outline: black 1px solid;
+    align-items: flex-end;
+}
+
+.question {
+    font-weight: bold;
+    font-size: larger;
 }
