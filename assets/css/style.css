@@ -46,8 +46,8 @@ img {
 }
 
 /* Button style */
-.btn--next, .btn--begin {
-    width: 20%;
+#btn-next, #btn-begin {
+    width: 50%;
     font-size: large;
     font-weight: bolder;
     color: blue;
