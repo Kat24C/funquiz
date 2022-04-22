@@ -1,16 +1,20 @@
 let restartButton = document.getElementById('btn-begin');
 let riddleQues = document.getElementById('riddles');
+let riddleQuestions = document.getElementById('riddle-question')
+let riddleAnswer = document.getElementsByClassName('answer')
+let shuffleRiddles;
 
 restartButton.addEventListener('click', beginRiddles);
 
 function beginRiddles() {
-    restartButton.classList.add('hide');
-    riddleQues.classList.remove('hide');
+    restartButton.hidden = true;
+    riddleQues.hidden = false;
+    selectedRiddle();
 }
-
 function selectedRiddle() {
-
+    
 }
+
 
 function nextRiddle() {
 

@@ -55,9 +55,13 @@ img {
     outline: black 1px solid;
 }
 
-.riddle {
-    font-weight: bold;
-    font-size: larger;
+/* The question styling */
+
+#riddle-question {
+    font-size: xx-large;
+    border: 1px solid blue;
+    margin-top: auto;
+    width: 100%;
 }
 
 .hide {
