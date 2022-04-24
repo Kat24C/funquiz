@@ -46,7 +46,7 @@ img {
 }
 
 /* Button style */
-#btn-next, #btn-begin {
+#btn-begin {
     width: 50%;
     font-size: large;
     font-weight: bolder;
