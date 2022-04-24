@@ -55,8 +55,8 @@ img {
     outline: black 1px solid;
 }
 
-.answers button {
-    display: flex;
+#answers button{
+    
     width: 45%;
     flex-direction: columns;
     background-color: lavenderblush;
@@ -65,12 +65,11 @@ img {
     margin-bottom: 5px;
 }
 
-button:hover {
+#answers button:hover {
     border: 2px darkblue solid;
     background-color: blueviolet;
     color: lavender;
 }
-
 
 /* The question styling */
 
@@ -83,4 +82,15 @@ button:hover {
 
 .hide {
     display: none;
+}
+
+/* Media Query for 450px*/
+@media screen and (max-width:450px) {
+body {
+    width: 100%;
+}
+
+#answers button{
+    width: 100%;
+}
 }

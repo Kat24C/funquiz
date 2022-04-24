@@ -1,11 +1,12 @@
 // Selected Elements
 const restartButton = document.getElementById('btn-begin');
 const riddleQues = document.getElementById('riddles');
-const riddleQuestions = document.getElementById('riddle-question')
-const riddleAnswerA = document.getElementById('answer-btn1')
-const riddleAnswerB = document.getElementById('answer-btn2')
-const riddleAnswerC = document.getElementById('answer-btn3')
-const riddleAnswerD = document.getElementById('answer-btn4')
+const riddleQuestions = document.getElementById('riddle-question');
+const riddleAnswer = document.getElementById('answers');
+const riddleAnswerA = document.getElementById('answer-btn1');
+const riddleAnswerB = document.getElementById('answer-btn2');
+const riddleAnswerC = document.getElementById('answer-btn3');
+const riddleAnswerD = document.getElementById('answer-btn4');
 let shuffleRiddles;
 let currentRiddle = 0;
 
@@ -16,8 +17,9 @@ function beginRiddles() {
     riddleQues.hidden = false;
     shuffleRiddleQuestions();
 }
+
 function shuffleRiddleQuestions() {
-    for (let quiz = 0; quiz < riddles.length; i++ ){
+    for (let quiz = 0; quiz < riddles.length; quiz++ ){
     shuffleRiddles = riddles.sort(() => Math.random() - 0.5);
     showRiddles(quiz)
     }
@@ -29,22 +31,21 @@ function showRiddles(riddle) {
     riddleAnswerA.innerText = r.answer1; 
     riddleAnswerB.innerText = r.answer2;  
     riddleAnswerC.innerText = r.answer3;  
-    riddleAnswerD.innerText = r.answer4;  
-    nextQuestion()
+    riddleAnswerD.innerText = r.answer4; 
+       
 }
 
-function nextQuestion() {
-    if(currentRiddle < lastQuestion){
-        currentRiddle++
-        showRiddles()
+function checkAnswer() {
+   
+    
     }
 
-}
+
 
 function correctScore() { 
 
 }
-
+/* Riddle questions and answers */
 const riddles = [{
     riddle: "What starts with an e and ends with an e but only has one letter in it?", 
     answer1: "an elephant",
