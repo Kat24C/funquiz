@@ -55,6 +55,23 @@ img {
     outline: black 1px solid;
 }
 
+.answers button {
+    display: flex;
+    width: 45%;
+    flex-direction: columns;
+    background-color: lavenderblush;
+    color: blue;
+    font-size: large;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    border: 2px darkblue solid;
+    background-color: blueviolet;
+    color: lavender;
+}
+
+
 /* The question styling */
 
 #riddle-question {
