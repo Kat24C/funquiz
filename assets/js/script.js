@@ -134,10 +134,10 @@ function showRiddles() {
 
 function checkAnswer(answer) {
        if (answer == riddles[currentRiddle].correct){
-        document.getElementById(currentRiddle).style.backgroundColor = "lightblue";
+        document.getElementById(currentRiddle).style.backgroundColor = "#00C59B";
         riddleScore++;
         } else {
-            document.getElementById(currentRiddle).style.backgroundColor = "red";
+            document.getElementById(currentRiddle).style.backgroundColor = "#A43563";
         }
        showNextQuestion();
     }

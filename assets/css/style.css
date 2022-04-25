@@ -29,8 +29,8 @@ img {
 #container {
     max-width: 800px;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 1rem;
+    padding-left: 1rem;
     margin-right: auto;
     margin-left: auto;    
 }
@@ -67,7 +67,7 @@ img {
 
 #answers button:hover {
     border: 2px darkblue solid;
-    background-color: blueviolet;
+    background-color: rgb(156, 89, 219);
     color: lavender;
 }
 
@@ -97,6 +97,9 @@ img {
     height : 2rem;
     border: 2px solid blueviolet;
     display: inline-block;
+    margin-left: 0.2rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
 }
 
 /* Media Query for 450px*/
