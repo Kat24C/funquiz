@@ -6,6 +6,9 @@ const riddleAnswerA = document.getElementById('answer-btn1');
 const riddleAnswerB = document.getElementById('answer-btn2');
 const riddleAnswerC = document.getElementById('answer-btn3');
 const riddleAnswerD = document.getElementById('answer-btn4');
+const correctAnswer = document.getElementsByClassName('correct');
+const wrongAnswer = document.getElementsByClassName('wrong');
+const finalScore = document.getElementById('score');
 let shuffleRiddles;
 let currentRiddle = 0;
 let riddleScore = 0;
@@ -21,13 +24,6 @@ function beginRiddles() {
     riddleQues.hidden = false;
     showNextQuestion();
 }
-
-/*function shuffleRiddleQuestions() {
-    //for (let quiz = 0; quiz < riddles.length; quiz++ ){
-  //  shuffleRiddles = riddles.sort(() => Math.random() - 0.5);
-    //showRiddles()
- //}
-} */
 
 function nextQuestionId() {
     var id = Math.floor(Math.random()*riddles.length);
@@ -68,8 +64,8 @@ function showRiddles() {
 
 function checkAnswer(answer) {
        if (answer == riddles[currentRiddle].correct){
-            alert('good');
-            riddleScore++;
+           riddleScore++;
+           alert('great')
         } else {
            alert('oops')
        }
@@ -77,9 +73,25 @@ function checkAnswer(answer) {
     }
 
 
-
+//Gives a message and total score to the user.
 function showScore() { 
-    alert(riddleScore);
+   if(riddleScore <= 1) {
+       document.body.textContent = `You got ${riddleScore} out of 5. Try harder next time.`
+   } else if (riddleScore <= 3){
+    document.body.textContent = `You got ${riddleScore} out of 5. Good Try.`
+   } else if (riddleScore = 4) {
+    document.body.textContent = `You got ${riddleScore} out of 5. Almost got it.`
+   } else {
+    document.body.textContent = `You got ${riddleScore} out of 5. Fantastic.`
+
+   }
+   
+}
+
+function restartRiddle(riddle) {
+    restartButton.hidden = false;
+    riddleQues.hidden = true;
+    currentRiddle = 0
 }
 
 /* Riddle questions and answers */
@@ -118,6 +130,15 @@ const riddles = [{
     answer3: "A balloon", 
     answer4: "Your age", 
     correct: 4,
+    asked: false
+},
+{ 
+    riddle: "What can you break, even if you never pick it up or touch it?",  
+    answer1: "An egg", 
+    answer2: "A promise", 
+    answer3: "A lie", 
+    answer4: "A glass", 
+    correct: 2,
     asked: false
 } 
 ]

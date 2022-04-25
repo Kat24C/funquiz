@@ -71,6 +71,14 @@ img {
     color: lavender;
 }
 
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
 /* The question styling */
 
 #riddle-question {
