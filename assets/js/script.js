@@ -9,90 +9,8 @@ const riddleAnswerD = document.getElementById('answer-btn4');
 const correctAnswer = document.getElementsByClassName('correct');
 const wrongAnswer = document.getElementsByClassName('wrong');
 const finalScore = document.getElementById('score');
-let shuffleRiddles;
-let currentRiddle = 0;
-let riddleScore = 0;
+const scoreCardIndex = document.getElementById('score-bar')
 
-restartButton.addEventListener('click', beginRiddles);
-riddleAnswerA.addEventListener('click', function() { checkAnswer(1)});
-riddleAnswerB.addEventListener('click', function() { checkAnswer(2)});
-riddleAnswerC.addEventListener('click', function() { checkAnswer(3)});
-riddleAnswerD.addEventListener('click', function() { checkAnswer(4)});
-
-function beginRiddles() {
-    restartButton.hidden = true;
-    riddleQues.hidden = false;
-    showNextQuestion();
-}
-
-function nextQuestionId() {
-    var id = Math.floor(Math.random()*riddles.length);
-    while (riddles[id].asked){
-        id = Math.floor(Math.random()*riddles.length);
-    }
-    return id;
-}
-
-function hasMoreQuestions() {
-    for (let quiz = 0; quiz < riddles.length; quiz++){
-        if (!riddles[quiz].asked)
-        {
-            return true;
-        }
-    }
-    return false;
-}
-
-function showNextQuestion() {
-    if (hasMoreQuestions()){
-        currentRiddle = nextQuestionId();
-        showRiddles();
-    } else {
-    showScore();
-    }
-}
-
-function showRiddles() {
-    let r = riddles[currentRiddle];
-    riddleQuestions.innerText = r.riddle;
-    riddleAnswerA.innerText = r.answer1; 
-    riddleAnswerB.innerText = r.answer2;  
-    riddleAnswerC.innerText = r.answer3;  
-    riddleAnswerD.innerText = r.answer4; 
-    r.asked = true;
-}
-
-function checkAnswer(answer) {
-       if (answer == riddles[currentRiddle].correct){
-           riddleScore++;
-           alert('great')
-        } else {
-           alert('oops')
-       }
-       showNextQuestion();
-    }
-
-
-//Gives a message and total score to the user.
-function showScore() { 
-   if(riddleScore <= 1) {
-       document.body.textContent = `You got ${riddleScore} out of 5. Try harder next time.`
-   } else if (riddleScore <= 3){
-    document.body.textContent = `You got ${riddleScore} out of 5. Good Try.`
-   } else if (riddleScore = 4) {
-    document.body.textContent = `You got ${riddleScore} out of 5. Almost got it.`
-   } else {
-    document.body.textContent = `You got ${riddleScore} out of 5. Fantastic.`
-
-   }
-   
-}
-
-function restartRiddle(riddle) {
-    restartButton.hidden = false;
-    riddleQues.hidden = true;
-    currentRiddle = 0
-}
 
 /* Riddle questions and answers */
 const riddles = [{
@@ -142,3 +60,106 @@ const riddles = [{
     asked: false
 } 
 ]
+
+let shuffleRiddles;
+let currentRiddle = 0;
+let riddleScore = 0;
+let lastRiddle = riddles.length - 1;
+
+restartButton.addEventListener('click', beginRiddles);
+riddleAnswerA.addEventListener('click', function() { checkAnswer(1)});
+riddleAnswerB.addEventListener('click', function() { checkAnswer(2)});
+riddleAnswerC.addEventListener('click', function() { checkAnswer(3)});
+riddleAnswerD.addEventListener('click', function() { checkAnswer(4)});
+
+function beginRiddles() {
+    restartButton.hidden = true;
+    riddleQues.hidden = false;
+    showNextQuestion();
+    scoreCounter();
+}
+
+//Scrambles the questions so they are asked in different orders.
+function nextQuestionId() {
+    var id = Math.floor(Math.random()*riddles.length);
+    while (riddles[id].asked){
+        id = Math.floor(Math.random()*riddles.length);
+    }
+    return id;
+}
+
+function scoreCounter(){
+    for(let colorScore = 0; colorScore <= lastRiddle; colorScore++){
+        scoreCardIndex.innerHTML += "<div class='scoreCard' id="+ colorScore +"></div>";
+    }
+}
+
+//Checks if there are more questions to be asked
+function hasMoreQuestions() {
+    for (let quiz = 0; quiz < lastRiddle; quiz++){
+        if (!riddles[quiz].asked)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+/* Show the questions and checks if there are more questions
+to be asked */
+function showNextQuestion() {
+    if (hasMoreQuestions()){
+        currentRiddle = nextQuestionId();
+        showRiddles();
+    } else {
+    showScore();
+    }
+}
+
+/**
+ * Shows the riddles and the riddle answers
+ * changes the questions asked to true
+ */
+function showRiddles() {
+    let r = riddles[currentRiddle];
+    riddleQuestions.innerText = r.riddle;
+    riddleAnswerA.innerText = r.answer1; 
+    riddleAnswerB.innerText = r.answer2;  
+    riddleAnswerC.innerText = r.answer3;  
+    riddleAnswerD.innerText = r.answer4; 
+    r.asked = true;
+}
+
+//Checks the answer and tells the user how they did.
+
+function checkAnswer(answer) {
+       if (answer == riddles[currentRiddle].correct){
+        document.getElementById(currentRiddle).style.backgroundColor = "lightblue";
+        riddleScore++;
+        } else {
+            document.getElementById(currentRiddle).style.backgroundColor = "red";
+        }
+       showNextQuestion();
+    }
+   
+
+//Gives a message and total score to the user.
+function showScore() { 
+   if(riddleScore <= 1) {
+       document.body.textContent = `You got ${riddleScore} out of 5. Try harder next time.`
+   } else if (riddleScore <= 3){
+    document.body.textContent = `You got ${riddleScore} out of 5. Good Try.`
+   } else if (riddleScore = 4) {
+    document.body.textContent = `You got ${riddleScore} out of 5. Almost got it.`
+   } else {
+    document.body.textContent = `You got ${riddleScore} out of 5. Fantastic.`
+
+   }
+   
+}
+
+function restartRiddle(riddle) {
+    restartButton.hidden = false;
+    riddleQues.hidden = true;
+    currentRiddle = 0
+}

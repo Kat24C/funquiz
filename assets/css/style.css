@@ -71,13 +71,7 @@ img {
     color: lavender;
 }
 
-.correct {
-    background-color: green;
-}
 
-.wrong {
-    background-color: red;
-}
 
 /* The question styling */
 
@@ -90,6 +84,19 @@ img {
 
 .hide {
     display: none;
+}
+
+/* Show correct and wrong answers to the user*/
+#score-bar {
+    width : 100%;
+    text-align: center;
+}
+
+.scoreCard {
+    width : 2rem;
+    height : 2rem;
+    border: 2px solid blueviolet;
+    display: inline-block;
 }
 
 /* Media Query for 450px*/
