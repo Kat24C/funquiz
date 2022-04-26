@@ -158,11 +158,10 @@ function showScore() {
    } else {
     finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Fantastic.`
    }
+   restartRiddleButton.classList.remove('hide');
+   restartRiddleButton.classList.add('show');
 }
 
 function restartRiddle() {
-    restartRiddleButton.hidden = false;
-    riddles.asked = false;
-    currentRiddle = 0;
-    beginRiddles()
+    window.location.reload();
 }

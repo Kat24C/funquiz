@@ -91,6 +91,10 @@ img {
     display: none;
 }
 
+.show {
+    display:inline-block;
+}
+
 /* Show correct and wrong answers to the user*/
 #score {
     display: inline-block;
