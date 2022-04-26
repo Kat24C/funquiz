@@ -36,7 +36,7 @@ img {
 }
 
 #qcontainer {
-      max-width: 50%;
+      max-width: 60%;
       max-height: fit-content;
       background-color: rgb(127, 246, 255);
       padding: 50px;
@@ -62,7 +62,6 @@ img {
 }
 
 #answers button{
-    
     width: 45%;
     flex-direction: columns;
     background-color: lavenderblush;
@@ -120,6 +119,10 @@ img {
 @media screen and (max-width:450px) {
 body {
     width: 100%;
+}
+
+#riddle-question{
+    font-size: x-large;
 }
 
 #answers button{

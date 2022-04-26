@@ -150,17 +150,18 @@ function checkAnswer(answer) {
 function showScore() { 
     riddleQues.hidden = true;
    if(riddleScore <= 1) {
-       finalScore.textContent = `You got ${riddleScore} out of 5. Try harder next time.`
+       finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Try harder next time.`
     } else if (riddleScore <= 3){
-    finalScore.textContent = `You got ${riddleScore} out of 5. Good Try.`
+    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Good Try.`
    } else if (riddleScore = 4) {
-    finalScore.textContent = `You got ${riddleScore} out of 5. Almost got it.`
+    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Almost got it.`
    } else {
-    finalScore.textContent = `You got ${riddleScore} out of 5. Fantastic.`
+    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Fantastic.`
    }
 }
 
-function restartRiddle(riddle) {
+function restartRiddle() {
+    restartRiddleButton.hidden = false;
     riddles.asked = false;
     currentRiddle = 0;
     beginRiddles()
