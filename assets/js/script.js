@@ -99,7 +99,7 @@ function scoreCounter(){
 
 //Checks if there are more questions to be asked
 function hasMoreQuestions() {
-    for (let quiz = 0; quiz < lastRiddle; quiz++){
+    for (let quiz = 0; quiz < riddles.length; quiz++){
         if (!riddles[quiz].asked)
         {
             return true;

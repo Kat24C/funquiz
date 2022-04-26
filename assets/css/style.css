@@ -97,14 +97,16 @@ img {
 
 /* Show correct and wrong answers to the user*/
 #score {
+    width: 100%;
     display: inline-block;
     font-size: xx-large;
     position: relative; 
+    text-align: center;
     top: -70px;
 }
 
 #score-bar {
-    width : 90%;
+    width : 100%;
     text-align: center;
     position: relative;
 }
@@ -122,7 +124,7 @@ img {
 /* Media Query for 450px*/
 @media screen and (max-width:450px) {
 body {
-    width: 100%;
+    width: 95%;
 }
 
 #riddle-question{
