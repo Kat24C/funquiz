@@ -87,9 +87,17 @@ img {
 }
 
 /* Show correct and wrong answers to the user*/
+#score {
+    display: inline-block;
+    font-size: xx-large;
+    position: relative; 
+    top: -70px;
+}
+
 #score-bar {
-    width : 100%;
+    width : 90%;
     text-align: center;
+    position: relative;
 }
 
 .scoreCard {
@@ -111,4 +119,14 @@ body {
 #answers button{
     width: 100%;
 }
+
+#score {
+    font-size: large;
+}
+
+.scoreCard {
+    width: 1rem;
+    height: 1rem;
+}
+
 }

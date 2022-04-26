@@ -145,21 +145,20 @@ function checkAnswer(answer) {
 
 //Gives a message and total score to the user.
 function showScore() { 
+    riddleQues.hidden = true;
    if(riddleScore <= 1) {
-       document.body.textContent = `You got ${riddleScore} out of 5. Try harder next time.`
+       finalScore.textContent = `You got ${riddleScore} out of 5. Try harder next time.`
    } else if (riddleScore <= 3){
-    document.body.textContent = `You got ${riddleScore} out of 5. Good Try.`
+    finalScore.textContent = `You got ${riddleScore} out of 5. Good Try.`
    } else if (riddleScore = 4) {
-    document.body.textContent = `You got ${riddleScore} out of 5. Almost got it.`
+    finalScore.textContent = `You got ${riddleScore} out of 5. Almost got it.`
    } else {
-    document.body.textContent = `You got ${riddleScore} out of 5. Fantastic.`
-
+    finalScore.textContent = `You got ${riddleScore} out of 5. Fantastic.`
    }
    
 }
 
 function restartRiddle(riddle) {
     restartButton.hidden = false;
-    riddleQues.hidden = true;
     currentRiddle = 0
 }
