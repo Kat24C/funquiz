@@ -46,13 +46,19 @@ img {
 }
 
 /* Button style */
-#btn-begin {
-    width: 50%;
+#btn-begin, #btn-restart {
+    width: 40%;
     font-size: large;
     font-weight: bolder;
     color: blue;
     background-color: lavender;
     outline: black 1px solid;
+}
+
+#btn-restart {
+    margin-left: 63%;
+    margin-top: 30px;
+    margin-bottom: -30px; 
 }
 
 #answers button{

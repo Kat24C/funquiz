@@ -1,5 +1,6 @@
 // Selected Elements
-const restartButton = document.getElementById('btn-begin');
+const beginButton = document.getElementById('btn-begin');
+const restartRiddleButton = document.getElementById('btn-restart')
 const riddleQues = document.getElementById('riddles');
 const riddleQuestions = document.getElementById('riddle-question');
 const riddleAnswerA = document.getElementById('answer-btn1');
@@ -66,14 +67,16 @@ let currentRiddle = 0;
 let riddleScore = 0;
 let lastRiddle = riddles.length - 1;
 
-restartButton.addEventListener('click', beginRiddles);
+/* Add eventListeners to start and answer buttons */
+beginButton.addEventListener('click', beginRiddles);
+restartRiddleButton.addEventListener('click', restartRiddle);
 riddleAnswerA.addEventListener('click', function() { checkAnswer(1)});
 riddleAnswerB.addEventListener('click', function() { checkAnswer(2)});
 riddleAnswerC.addEventListener('click', function() { checkAnswer(3)});
 riddleAnswerD.addEventListener('click', function() { checkAnswer(4)});
 
 function beginRiddles() {
-    restartButton.hidden = true;
+    beginButton.hidden = true;
     riddleQues.hidden = false;
     showNextQuestion();
     scoreCounter();
@@ -148,17 +151,17 @@ function showScore() {
     riddleQues.hidden = true;
    if(riddleScore <= 1) {
        finalScore.textContent = `You got ${riddleScore} out of 5. Try harder next time.`
-   } else if (riddleScore <= 3){
+    } else if (riddleScore <= 3){
     finalScore.textContent = `You got ${riddleScore} out of 5. Good Try.`
    } else if (riddleScore = 4) {
     finalScore.textContent = `You got ${riddleScore} out of 5. Almost got it.`
    } else {
     finalScore.textContent = `You got ${riddleScore} out of 5. Fantastic.`
    }
-   
 }
 
 function restartRiddle(riddle) {
-    restartButton.hidden = false;
-    currentRiddle = 0
+    riddles.asked = false;
+    currentRiddle = 0;
+    beginRiddles()
 }
