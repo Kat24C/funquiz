@@ -59,8 +59,35 @@ const riddles = [{
     answer4: "A glass", 
     correct: 2,
     asked: false
-} 
-]
+},
+{
+    riddle: "What gets wet while drying?",  
+    answer1: "A teabag", 
+    answer2: "A Facecloth", 
+    answer3: "A towel", 
+    answer4: "A blanket", 
+    correct: 3,
+    asked: false
+},
+{
+    riddle: "You walk into a room that contains a match, a kerosene lamp, a candle and a fireplace. What would you light first?",  
+    answer1: "A kerosene lamp", 
+    answer2: "A candle", 
+    answer3: "A match", 
+    answer4: "A fireplace", 
+    correct: 3,
+    asked: false
+},
+{
+    riddle: "I follow you all the time and copy your every move, but you can’t touch me or catch me. What am I?",  
+    answer1: "Your shadow", 
+    answer2: "The sky", 
+    answer3: "A cloud", 
+    answer4: "The sun", 
+    correct: 1,
+    asked: false
+}
+];
 
 let shuffleRiddles;
 let currentRiddle = 0;
@@ -149,11 +176,11 @@ function checkAnswer(answer) {
 //Gives a message and total score to the user.
 function showScore() { 
     riddleQues.hidden = true;
-   if(riddleScore <= 1) {
+   if(riddleScore <= 2) {
        finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Try harder next time.`
-    } else if (riddleScore <= 3){
+    } else if (riddleScore <= 4){
     finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Good Try.`
-   } else if (riddleScore = 4) {
+   } else if (riddleScore <= 6) {
     finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Almost got it.`
    } else {
     finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Fantastic.`
