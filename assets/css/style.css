@@ -63,7 +63,6 @@ img {
 
 #answers button{
     width: 45%;
-    flex-direction: columns;
     background-color: lavenderblush;
     color: blue;
     font-size: large;
