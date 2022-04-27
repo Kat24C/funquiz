@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Riddle some fun</title>
-</head>
-<body>
-    <div class="container">
-    <!--Riddle Heading-->
-    <h1><img class="thinkpic" src="assets/images/riddle.jpg" alt="Think outside the box">  Riddle some fun  <img src="assets/images/riddle.jpg" alt="Think outside the box"></h1>
-    <!--Game board-->
-    <div id="qcontainer">
-        <!--Start and next buttons-->
-        <button id="btn-begin">Begin</button>
-        <!--Basic question box-->
-        <div id="riddles" hidden>
-            <p id="riddle-question"> Riddle </p>
-         <!--Multiple choice four answers--> 
-         <div id="answers">
-            <button id="answer-btn1" class="correct"></button>
-            <button id="answer-btn2" class="wrong"></button>
-            <button id="answer-btn3"></button>
-            <button id="answer-btn4"></button>
-         </div>
-         </div>
-          <!--Final score will be score out of 5-->
-          <div id="score-bar"></div>
-          <div id="score" class="hide"></div>
-          <button id="btn-restart" class="hide">Restart</button>
 
-    </div>
-    </div>
-    <script src="assets/js/script.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Riddle some fun</title>
+</head>
+
+<body>
+	<div class="container">
+		<!--Riddle Heading-->
+		<h1><img class="thinkpic" src="assets/images/riddle.jpg" alt="Think outside the box">  Riddle some fun 
+    <img src="assets/images/riddle.jpg" alt="Think outside the box"></h1>
+		<!--Game board-->
+		<div id="qcontainer">
+			<!--Start and next buttons-->
+			<button id="btn-begin">Begin</button>
+			<!--Basic question box-->
+			<div id="riddles" hidden>
+				<p id="riddle-question"> Riddle </p>
+				<!--Multiple choice four answers-->
+				<div id="answers">
+					<button id="answer-btn1" class="correct"></button>
+					<button id="answer-btn2" class="wrong"></button>
+					<button id="answer-btn3"></button>
+					<button id="answer-btn4"></button>
+				</div>
+			</div>
+			<!--Final score will be score out of 5-->
+			<div id="score-bar"></div>
+			<div id="score" class="hide"></div>
+			<button id="btn-restart" class="hide">Restart</button>
+		</div>
+	</div>
+	<script src="assets/js/script.js"></script>
 </body>
+
 </html>

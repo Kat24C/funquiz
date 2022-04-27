@@ -111,15 +111,16 @@ function beginRiddles() {
 
 //Scrambles the questions so they are asked in different orders.
 function nextQuestionId() {
-    var id = Math.floor(Math.random()*riddles.length);
+    let id = Math.floor(Math.random()*riddles.length);
     while (riddles[id].asked){
         id = Math.floor(Math.random()*riddles.length);
     }
     return id;
 }
 
+//Shows the user if they have the answer right or wrong. 
 function scoreCounter(){
-    for(let colorScore = 0; colorScore <= lastRiddle; colorScore++){
+    for(nextQuestionId()){
         scoreCardIndex.innerHTML += "<div class='scoreCard' id="+ colorScore +"></div>";
     }
 }
@@ -132,7 +133,7 @@ function hasMoreQuestions() {
             return true;
         }
     }
-    return false;
+    return false; 
 }
 
 /* Show the questions and checks if there are more questions
@@ -189,6 +190,7 @@ function showScore() {
    restartRiddleButton.classList.add('show');
 }
 
+// Restarts the riddle questions
 function restartRiddle() {
     window.location.reload();
 }

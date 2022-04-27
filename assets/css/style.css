@@ -4,75 +4,75 @@
 /* Body style and color */
 
 body {
-    font-family: 'patrick Hand', sans-serif, 'Shadow Into Light';
-    background-color: #EBEEFF;
-    color: blueviolet;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	font-family: 'patrick Hand', sans-serif, 'Shadow Into Light';
+	background-color: #EBEEFF;
+	color: blueviolet;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Title and image in title */
 
 h1 {
-    font-family: 'Shadows Into Light', sans-serif, 'Patrick Hand';
-    color: blue; 
+	font-family: 'Shadows Into Light', sans-serif, 'Patrick Hand';
+	color: blue;
 }
 
 img {
-    width: 5%;
+	width: 5%;
 }
 
 /* Question and answer container */
 
 #container {
-    max-width: 800px;
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-right: auto;
-    margin-left: auto;    
+	max-width: 800px;
+	width: 100%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #qcontainer {
-      max-width: 60%;
-      max-height: fit-content;
-      background-color: rgb(127, 246, 255);
-      padding: 50px;
-      box-shadow: 0 0 15px 5px;
-      margin-left: auto;
-      margin-right: auto;
+	max-width: 60%;
+	max-height: fit-content;
+	background-color: rgb(127, 246, 255);
+	padding: 50px;
+	box-shadow: 0 0 15px 5px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Button style */
 #btn-begin, #btn-restart {
-    width: 40%;
-    font-size: large;
-    font-weight: bolder;
-    color: blue;
-    background-color: lavender;
-    outline: black 1px solid;
+	width: 40%;
+	font-size: large;
+	font-weight: bolder;
+	color: blue;
+	background-color: lavender;
+	outline: black 1px solid;
 }
 
 #btn-restart {
-    margin-left: 63%;
-    margin-top: 30px;
-    margin-bottom: -30px; 
+	margin-left: 63%;
+	margin-top: 30px;
+	margin-bottom: -30px;
 }
 
-#answers button{
-    width: 45%;
-    background-color: lavenderblush;
-    color: blue;
-    font-size: large;
-    margin-bottom: 5px;
+#answers button {
+	width: 45%;
+	background-color: lavenderblush;
+	color: blue;
+	font-size: large;
+	margin-bottom: 5px;
 }
 
 #answers button:hover {
-    border: 2px darkblue solid;
-    background-color: rgb(156, 89, 219);
-    color: lavender;
+	border: 2px darkblue solid;
+	background-color: rgb(156, 89, 219);
+	color: lavender;
 }
 
 
@@ -80,67 +80,66 @@ img {
 /* The question styling */
 
 #riddle-question {
-    font-size: xx-large;
-    border: 1px solid blue;
-    margin-top: auto;
-    width: 100%;
+	font-size: xx-large;
+	border: 1px solid blue;
+	margin-top: auto;
+	width: 100%;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .show {
-    display:inline-block;
+	display: inline-block;
 }
 
 /* Show correct and wrong answers to the user*/
 #score {
-    width: 100%;
-    display: inline-block;
-    font-size: xx-large;
-    position: relative; 
-    text-align: center;
-    top: -70px;
+	width: 100%;
+	display: inline-block;
+	font-size: xx-large;
+	position: relative;
+	text-align: center;
+	top: -70px;
 }
 
 #score-bar {
-    width : 100%;
-    text-align: center;
-    position: relative;
+	width: 100%;
+	text-align: center;
+	position: relative;
 }
 
 .scoreCard {
-    width : 2rem;
-    height : 2rem;
-    border: 2px solid blueviolet;
-    display: inline-block;
-    margin-left: 0.2rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+	width: 2rem;
+	height: 2rem;
+	border: 2px solid blueviolet;
+	display: inline-block;
+	margin-left: 0.2rem;
+	margin-top: 2rem;
+	margin-bottom: -2rem;
 }
 
 /* Media Query for 450px*/
 @media screen and (max-width:450px) {
-body {
-    width: 95%;
-}
+	body {
+		width: 95%;
+	}
 
-#riddle-question{
-    font-size: x-large;
-}
+	#riddle-question {
+		font-size: x-large;
+	}
 
-#answers button{
-    width: 100%;
-}
+	#answers button {
+		width: 100%;
+	}
 
-#score {
-    font-size: large;
-}
+	#score {
+		font-size: large;
+	}
 
-.scoreCard {
-    width: 1rem;
-    height: 1rem;
-}
-
+	.scoreCard {
+		width: 1rem;
+		height: 1rem;
+	}
 }
