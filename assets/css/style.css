@@ -95,6 +95,7 @@ img {
 	width: 100%;
 	display: inline-block;
 	font-size: xx-large;
+	position: relative;
 	text-align: center;
 	top: -70px;
 }

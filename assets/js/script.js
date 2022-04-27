@@ -93,6 +93,7 @@ let shuffleRiddles;
 let currentRiddle = 0;
 let riddleScore = 0;
 let lastRiddle = riddles.length - 1;
+let orderQuestion = currentRiddle;
 
 /* Add eventListeners to start and answer buttons */
 beginButton.addEventListener('click', beginRiddles);
@@ -165,10 +166,10 @@ function showRiddles() {
 
 function checkAnswer(answer) {
        if (answer == riddles[currentRiddle].correct){
-        document.getElementById(currentRiddle).style.backgroundColor = "#00C59B";
+        document.getElementById(orderQuestion++).style.backgroundColor = "#00C59B";
         riddleScore++;
         } else {
-            document.getElementById(currentRiddle).style.backgroundColor = "#A43563";
+            document.getElementById(orderQuestion++).style.backgroundColor = "#A43563";
         }
        showNextQuestion();
     }
