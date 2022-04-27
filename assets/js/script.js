@@ -120,7 +120,7 @@ function nextQuestionId() {
 
 //Shows the user if they have the answer right or wrong. 
 function scoreCounter(){
-    for(nextQuestionId()){
+    for(let colorScore = 0; colorScore <= lastRiddle; colorScore++){
         scoreCardIndex.innerHTML += "<div class='scoreCard' id="+ colorScore +"></div>";
     }
 }

@@ -29,10 +29,6 @@ img {
 #container {
 	max-width: 800px;
 	width: 100%;
-	padding-right: 1rem;
-	padding-left: 1rem;
-	margin-right: auto;
-	margin-left: auto;
 }
 
 #qcontainer {
@@ -40,7 +36,7 @@ img {
 	max-height: fit-content;
 	background-color: rgb(127, 246, 255);
 	padding: 50px;
-	box-shadow: 0 0 15px 5px;
+	box-shadow: 0 0 1rem 0.5rem;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -99,7 +95,6 @@ img {
 	width: 100%;
 	display: inline-block;
 	font-size: xx-large;
-	position: relative;
 	text-align: center;
 	top: -70px;
 }
