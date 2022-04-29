@@ -39,8 +39,24 @@ This is the link to the website: https://kat24c.github.io/funquiz/
 * By running my project through lighthouse in devtool, I confirmed that the colours and fonts are easy to read and accessible. 
 * CSS
   * No errors were found when running the css code through jigsaw W3C code validator
- <img src="assets/images/css check.jpg" width=70% alt="css validator image">
- * HTML
+* HTML
   * No errors were found when running the html code through validator W3
+* Accessibility
+  * By running my project through lighthouse in devtool, I confirmed that the colours and fonts are easy to read and accessible. 
+ <img src="assets/images/css check.jpg" width=70% alt="css validator image">
  <img src="assets/images/htmlcheck.jpg" width=70% alt="html validator image">
+ <img src="assets/images/lighthouse-check.jpg" width=70% alt="Lighthouse check image">
 
+## Deployment
+  * The site was deployed through Github pages: 
+     * Using git add . , git commit -m and git push to upload the content to the github repository. 
+     * In the github pages navigate to settings. 
+     * From the drop down menu change branch to main. 
+     * Once the main branch has been selected, the page will provide a link to the completed website. 
+
+ ## Credits
+ * The container code was adapted from Spencer Barriball, Mentor.
+
+## Media
+* The image Think outside the box was taken from pexels.com.
+* The riddles were taken from https://parade.com/947956/parade/riddles/.
