@@ -1,4 +1,4 @@
-#Riddle some fun
+# Riddle some fun
 This fun interactive websites lets user answer riddles by multiple choice. It can be used by users of all ages and it gives them a challenge to think about.  
 This is the link to the website: https://kat24c.github.io/funquiz/
 
@@ -26,3 +26,21 @@ This is the link to the website: https://kat24c.github.io/funquiz/
 * At the bottom of the container are 8 squares. When the answer right the square will turn carribean green and when the answer is wrong the square will turn #A43563. 
 * The last page will show the score with a message: You got 4 out of 8. Good Try.
 * THe restart button will take you back to the beginning page.  
+
+### Testing
+* I tested the pages in different browsers including Edge, Chrome and Brave.
+* I tested the page using a samsung A70 mobile.  
+* I used devtools to confirm that this project is responsive, looks good and functions on different screen sizes. 
+
+### * Bugs
+  * There were no unfixed bugs. 
+
+### * Validation
+* By running my project through lighthouse in devtool, I confirmed that the colours and fonts are easy to read and accessible. 
+* CSS
+  * No errors were found when running the css code through jigsaw W3C code validator
+ <img src="assets/images/css check.jpg" width=70% alt="css validator image">
+ * HTML
+  * No errors were found when running the html code through validator W3
+ <img src="assets/images/htmlcheck.jpg" width=70% alt="html validator image">
+
