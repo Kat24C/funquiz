@@ -80,6 +80,13 @@ This is the link to the website: https://kat24c.github.io/funquiz/
 
  ## Credits
  * The container code was adapted from Spencer Barriball, Mentor.
+ * I watched a variety of youTube videos and looked at a variety of websites before starting funquiz.
+ *  These included:
+     * Build A Quiz App With JavaScript by web Dev
+     * Create a Quiz App with Timer using HTML CSS & JavaScript by Coding Nepal
+     * https://webdevtrick.com/create-javascript-quiz-program/
+     * https://www.codingninjas.com/blog/2020/11/03/how-to-create-a-quiz-in-javascript/
+     * https://simplestepscode.com/javascript-quiz-tutorial/
 
 ## Media
 * The image Think outside the box was taken from pexels.com.
