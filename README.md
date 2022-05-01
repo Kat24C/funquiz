@@ -22,10 +22,15 @@ This is the link to the website: https://kat24c.github.io/funquiz/
  * The question is centerised and in blueviolet. 
  * The answers are mulitple choice and when you hover over them they change to a blueviolet background with light blue writing. 
 
+<img src="assets/images/riddle-img.jpg" width=70% alt="Riddle page image">
+
 ## * Score 
 * At the bottom of the container are 8 squares. When the answer right the square will turn carribean green and when the answer is wrong the square will turn #A43563. 
 * The last page will show the score with a message: You got 4 out of 8. Good Try.
-* THe restart button will take you back to the beginning page.  
+* The restart button will take you back to the beginning page.  
+
+<img src="assets/images/scorebar.jpg" width=70% alt="Shows the score bar at the bottom of the questions">
+<img src="assets/images/finalscore.jpg" width=70% alt="The final score page image">
 
 ### Testing
 * I tested the pages in different browsers including Edge, Chrome and Brave.
