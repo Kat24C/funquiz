@@ -63,6 +63,8 @@ This is the link to the website: https://kat24c.github.io/funquiz/
   * No errors were found when running the javaScript code through JsLint.  
 * Accessibility
   * By running my project through lighthouse in devtool, I confirmed that the colours and fonts are easy to read and accessible. 
+  
+ <img src="assets/images/javascript.jpg" width=70% alt="JSHint image">
  <img src="assets/images/css check.jpg" width=70% alt="css validator image">
  <img src="assets/images/htmlcheck.jpg" width=70% alt="html validator image">
  <img src="assets/images/lighthouse-check.jpg" width=70% alt="Lighthouse check image">
@@ -73,6 +75,8 @@ This is the link to the website: https://kat24c.github.io/funquiz/
      * In the github pages navigate to settings. 
      * From the drop down menu change branch to main. 
      * Once the main branch has been selected, the page will provide a link to the completed website. 
+
+ <img src="assets/images/gitpage.jpg" width=70% alt="github pages image">
 
  ## Credits
  * The container code was adapted from Spencer Barriball, Mentor.
