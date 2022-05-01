@@ -1,16 +1,14 @@
 // Selected Elements
 const beginButton = document.getElementById('btn-begin');
-const restartRiddleButton = document.getElementById('btn-restart')
+const restartRiddleButton = document.getElementById('btn-restart');
 const riddleQues = document.getElementById('riddles');
 const riddleQuestions = document.getElementById('riddle-question');
 const riddleAnswerA = document.getElementById('answer-btn1');
 const riddleAnswerB = document.getElementById('answer-btn2');
 const riddleAnswerC = document.getElementById('answer-btn3');
 const riddleAnswerD = document.getElementById('answer-btn4');
-const correctAnswer = document.getElementsByClassName('correct');
-const wrongAnswer = document.getElementsByClassName('wrong');
 const finalScore = document.getElementById('score');
-const scoreCardIndex = document.getElementById('score-bar')
+const scoreCardIndex = document.getElementById('score-bar');
 
 
 /* Riddle questions and answers */
@@ -89,7 +87,6 @@ const riddles = [{
 }
 ];
 
-let shuffleRiddles;
 let currentRiddle = 0;
 let riddleScore = 0;
 let lastRiddle = riddles.length - 1;
@@ -98,10 +95,10 @@ let orderQuestion = currentRiddle;
 /* Add eventListeners to start and answer buttons */
 beginButton.addEventListener('click', beginRiddles);
 restartRiddleButton.addEventListener('click', restartRiddle);
-riddleAnswerA.addEventListener('click', function() { checkAnswer(1)});
-riddleAnswerB.addEventListener('click', function() { checkAnswer(2)});
-riddleAnswerC.addEventListener('click', function() { checkAnswer(3)});
-riddleAnswerD.addEventListener('click', function() { checkAnswer(4)});
+riddleAnswerA.addEventListener('click', function() { checkAnswer(1);});
+riddleAnswerB.addEventListener('click', function() { checkAnswer(2);});
+riddleAnswerC.addEventListener('click', function() { checkAnswer(3);});
+riddleAnswerD.addEventListener('click', function() { checkAnswer(4);});
 
 function beginRiddles() {
     beginButton.hidden = true;
@@ -129,7 +126,7 @@ function scoreCounter(){
 //Checks if there are more questions to be asked
 function hasMoreQuestions() {
     for (let quiz = 0; quiz < riddles.length; quiz++){
-        if (!riddles[quiz].asked)
+        if (!riddles[quiz].asked);
         {
             return true;
         }
@@ -179,13 +176,13 @@ function checkAnswer(answer) {
 function showScore() { 
     riddleQues.hidden = true;
    if(riddleScore <= 2) {
-       finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Try harder next time.`
+       finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Better luck next time!`;
     } else if (riddleScore <= 4){
-    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Good Try.`
+    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Good Try!`;
    } else if (riddleScore <= 6) {
-    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Almost got it.`
+    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Almost got it!`;
    } else {
-    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Fantastic.`
+    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Fantastic!`;
    }
    restartRiddleButton.classList.remove('hide');
    restartRiddleButton.classList.add('show');
