@@ -78,6 +78,7 @@ let riddles = [{
 }
 ];
 
+let finalTotal = riddles.length
 let currentRiddle = 0;
 let riddleScore = 0;
 let lastRiddle = riddles.length - 1;
@@ -148,13 +149,13 @@ function checkAnswer(answer) {
 function showScore() { 
     riddleQues.hidden = true;
    if(riddleScore <= 2) {
-       finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Better luck next time.`
+       finalScore.textContent = `You got ${riddleScore} out of ${finalTotal}. Better luck next time.`
     } else if (riddleScore <= 4){
-    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Good Try.`
+    finalScore.textContent = `You got ${riddleScore} out of ${finalTotal}. Good Try.`
    } else if (riddleScore <= 6) {
-    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Almost got it.`
+    finalScore.textContent = `You got ${riddleScore} out of ${finalTotal}. Almost got it.`
    } else {
-    finalScore.textContent = `You got ${riddleScore} out of ${riddles.length}. Fantastic.`
+    finalScore.textContent = `You got ${riddleScore} out of ${finalTotal}. Fantastic.`
    }
    restartRiddleButton.classList.remove('hide');
    restartRiddleButton.classList.add('show');
